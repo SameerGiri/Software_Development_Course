@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Responsive Website in HTML CSS</title>
+    <link rel="stylesheet" href="/CSS/project2.css" />
+    <script src="../custom-scripts.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <!-- Header Start -->
+      <header>
+        <nav class="nav container">
+          <h2 class="nav_logo"><a href="#">Syntax Scholars</a></h2>
+          <ul class="menu_items">
+            <img src="/Images/times.svg" alt="timesicon" id="menu_toggle" />
+            <li><a href="#" class="nav_link">Home</a></li>
+            <li><a href="about.html" class="nav_link">About</a></li>
+            <li><a href="service.html" class="nav_link">Service</a></li>
+            <li><a href="project.html" class="nav_link">Project</a></li>
+            <li><a href="contact.html" class="nav_link">Contact</a></li>
+          </ul>
+          <img src="/Images/bars.svg" alt="bars" id="menu_toggle" />
+        </nav>
+      </header>
+      <!-- Header End -->
+      <!-- Hero Start -->
+      <section class="hero">
+        <div class="row container">
+          <div class="column">
+            <h2>
+              Top free tool and extension to <br />radiply grow you business
+            </h2>
+            <p>
+              Welcome to Syntax Scholars Academy! Empowering aspiring developers
+              with hands-on training and expert-led courses, we guide you from
+              foundational skills to advanced development techniques. Join us to
+              unlock your full potential in web, mobile, data science, and
+              full-stack development.
+            </p>
+            <div class="buttons">
+              <button class="btn">Read More</button>
+              <button class="btn">Contact Us</button>
+            </div>
+          </div>
+          <div class="column">
+            <img src="/Images/hero.png" alt="heroImg" class="hero_img" />
+          </div>
+        </div>
+        <img src="/Images/bg-bottom-hero.png" alt="" class="curveImg" />
+      </section>
+      <!-- Hero End-->
+    </main>
+    <script>
+      const header = document.querySelector("header");
+      const menuToggler = document.querySelectorAll("#menu_toggle");
+      menuToggler.forEach((toggler) => {
+        toggler.addEventListener("click", () =>
+          header.classList.toggle("showMenu")
+        );
+      });
+    </script>
+  </body>
+</html>
